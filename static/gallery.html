@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>My Gallery - Met Gallery</title>
+	</head>
+	<body>
+		<header class="page-header">
+			<div class="container">
+				<nav class="navbar">
+					<a class="met-gallery-logo" href="gallery.html">My Saved Items (<span id="savedCounter">0</span>)</a>
+					<div class="my_met-gallery">
+                        <a href="index.html" class="have-icon have-icon-home">Back Home</a>
+					</div>
+				</nav>
+			</div>
+		</header>
+		<div class="page">
+			<div class="container">
+				<div class="met-gallery">
+                    <span id="alert" class="error" style="display: none;">Opps! something went wrong! Please try again.</span>
+                    <span id="loader" class="loading">Please wait, page is loading...</span>
+                    <ul id="savedItems" class="grid met-gallery" style="display:none" />
+				</div>
+			</div>
+		</div>
+        <script>
+            window.__MetPage__ = 'gallery';
+        </script>
+            <script src="bundle.js"></script>
+	</body>
+</html>

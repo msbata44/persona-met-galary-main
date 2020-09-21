@@ -1,0 +1,121 @@
+//
+$font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+$black: #000000;
+$white: #ffffff;
+$theme: #0099e5;
+
+@mixin square($width) {
+    width: $width;
+    height: $width;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    margin: 0;
+    font-family: $font-family;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    background-color: $white;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+}
+
+a {
+    text-decoration: none;
+    color: $theme;
+    font-size: 0.875rem;
+}
+
+.have-icon {
+    position: relative;
+    padding-left: 1rem;
+    font-size: 0.75rem;
+    max-width: 60%;
+    color: #333333;
+
+    &::before {
+        content: '';
+        position: absolute;
+        @include square(1.125rem);
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        background-repeat: no-repeat;
+        background-size: 0.625rem auto;
+    }
+
+    &-artist {
+        &::before {
+            background-image: url(../../static/images/artist.svg);
+            background-position: left center;
+        }
+    }
+
+    &-view {
+        padding-left: 0;
+        padding-right: 1rem;
+        &::before {
+            left: auto;
+            right: 0;
+            background-image: url(../../static/images/view.svg);
+            background-position: right center;
+        }
+    }
+
+    &-gallery {
+        display: block;
+        cursor: pointer;
+        white-space: nowrap;
+        font-weight: 500;
+        padding-left: 2.25rem;
+        color: #333333;
+        &::before {
+            @include square(1.5rem);
+            background-size: 1.5rem;
+            background-image: url(../../static/images/account.svg);
+        }
+    }
+
+    &-home {
+        display: block;
+        cursor: pointer;
+        white-space: nowrap;
+        font-weight: 500;
+        padding-left: 2.25rem;
+        color: #333333;
+        &::before {
+            @include square(1.5rem);
+            background-size: 1.5rem;
+            background-image: url(../../static/images/view.svg);
+        }
+    }
+}
+
+.loading {
+    display: block;
+    text-align: center;
+    color: white;
+    padding: 1rem;
+    border: 1px solid white;
+    background: #434190;
+    margin: 0 0 1.5rem;
+}
+
+.error {
+    display: block;
+    text-align: center;
+    color: #c53030;
+    padding: 1rem;
+    border: 1px solid #fc8181;
+    background: #fff5f5;
+    margin: 0 0 1.5rem;
+}
+
+.hide {
+    display: none;
+    visibility: hidden;
+}
