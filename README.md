@@ -20,7 +20,7 @@ We need to finish it by Monday to get our profile shortlisted.
 **Setup**
 
 ```bash
-    git clone https://github.com/optimumfuturist/persona-met-galary
+    git clone https://github.com/msbata44/persona-met-galary
     cd personal-met-gallery
     npm install
 ```
